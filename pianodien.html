@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Sưu Tập Piano Điện Cao Cấp - MELODY GRAND</title>
+    <style>
+        /* CSS CHUNG VÀ FONT */
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Nền trắng ngà */
+        }
+        .header {
+            background-color: #005f73; /* Xanh đậm hơn cho Digital */
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 5px solid #00c49a; /* Xanh ngọc nổi bật */
+        }
+        
+        /* CSS CHO LOGO */
+        .header-logo {
+            display: block;
+            margin: 0 auto 15px auto;
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid #00c49a;
+        }
+
+        .header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3em;
+            margin: 0;
+            letter-spacing: 3px;
+        }
+        .header p {
+            font-size: 1.1em;
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        /* CONTAINER CHÍNH CHO BỘ SƯU TẬP */
+        .collection-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* GRID CHO CÁC SẢN PHẨM PIANO */
+        .piano-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        /* THẺ SẢN PHẨM */
+        .piano-card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .piano-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .piano-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .piano-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .piano-info h3 {
+            color: #005f73;
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .piano-info .model {
+            color: #00c49a;
+            font-style: italic;
+            font-weight: normal;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+        
+        /* CÁC THÔNG SỐ KỸ THUẬT NỔI BẬT */
+        .specs {
+            font-size: 0.85em;
+            color: #555;
+            margin-bottom: 10px;
+            min-height: 40px; /* Đảm bảo chiều cao đồng nhất */
+        }
+
+        .piano-price {
+            font-size: 1.8em;
+            color: #e74c3c; /* Màu đỏ cho giá Digital */
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        
+        .price-contact {
+             font-size: 1.5em;
+             color: #e74c3c;
+             font-weight: bold;
+             margin: 15px 0;
+        }
+
+        .piano-details {
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            color: #666;
+            min-height: 70px; /* Đảm bảo chiều cao đồng nhất cho mô tả */
+        }
+
+        .btn-contact {
+            display: inline-block;
+            background-color: #00c49a;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn-contact:hover {
+            background-color: #008f6b;
+        }
+
+        /* PHẦN FOOTER (Tối giản) */
+        .footer {
+            background-color: #005f73;
+            color: #aaa;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <!-- LOGO ĐƯỢC THÊM VÀO ĐÂY -->
+        <img class="header-logo" src="https://previews.123rf.com/images/wangsinawang/wangsinawang1807/wangsinawang180700269/106296156-grand-piano-logo-music-media-design-template-vector-design-best-use-for-store-application-shop.jpg" alt="MELODY GRAND Logo">
+        
+        <h1>PIANO ĐIỆN </h1>
+        <p>Công nghệ âm thanh hiện đại, cảm ứng phím chân thực, tối ưu cho mọi không gian.</p>
+    </div>
+
+    <div class="collection-container">
+        <h2><p style="text-align: center; margin-bottom: 40px; color: #555;">Bộ Sưu Tập Digital Piano Cao Cấp</p></h2>
+        <p style="text-align: center; margin-bottom: 40px; color: #555;">Các mẫu đàn điện hàng đầu, mô phỏng hoàn hảo âm thanh và cảm giác phím của Grand Piano cơ.</p>
+
+        <div class="piano-grid">
+
+            <!-- 1. YAMAHA Clavinova CLP-785 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://pianohouse.vn/image/cache/960x720/catalog/products/digital-piano/yamaha-clp/700%20Series/785/clp-785-pe-01.jpg" alt="Yamaha CLP-785 Digital Piano">
+                <div class="piano-info">
+                    <h3>Yamaha CLP-785</h3>
+                    <span class="model">Clavinova Series | Piano Luyện Tập Cao Cấp</span>
+                    <p class="specs">Phím GrandTouch™ & GrandTouch-S™ | Lấy mẫu Piano CFX & Bösendorfer Imperial.</p>
+                    <p class="piano-details">Mẫu cao cấp nhất dòng CLP, mang lại trải nghiệm phím gỗ và âm thanh Grand Piano chân thực nhất, lý tưởng cho nghệ sĩ và phòng thu tại nhà.</p>
+                    <div class="piano-price">89,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+
+            <!-- 2. ROLAND LX708 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7tGA-53JtpVR1jfwtwlpgssaYeOJ2Lte7JA&s" alt="Roland LX708 Digital Piano">
+                <div class="piano-info">
+                    <h3>Roland LX708</h3>
+                    <span class="model">LX Series | Piano Digital Hoà Nhạc</span>
+                    <p class="specs">Phím Hybrid Grand Keyboard | Hệ thống 8 loa Acoustic Projection.</p>
+                    <p class="piano-details">Thiết kế tủ đứng sang trọng, mô phỏng âm thanh tuyệt vời của phòng hòa nhạc. Phím dài hơn, cảm ứng nhạy như đàn cơ thực thụ.</p>
+                    <div class="piano-price">95,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+            
+            <!-- 3. KAWAI CA901 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREpZguez5yOngYx6xe7nlkNF6jjzsiLS3qug&s" alt="Kawai CA901 Digital Piano">
+                <div class="piano-info">
+                    <h3>Kawai CA901</h3>
+                    <span class="model">Concert Artist Series | Công nghệ Soundboard</span>
+                    <p class="specs">Phím Grand Feel III (Gỗ) | Soundboard Speaker System.</p>
+                    <p class="piano-details">Sử dụng công nghệ bảng cộng hưởng bằng gỗ tự nhiên (Soundboard) để tái tạo độ rung và cộng hưởng âm thanh vật lý như đàn cơ. Trải nghiệm tuyệt đỉnh.</p>
+                    <div class="piano-price">78,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+
+            <!-- 4. CASIO Grand Hybrid GP-510 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://pianohouse.vn/image/cache/960x720/catalog/products/digital-piano/Casio/GP510/casio-gp510bp-2.jpg" alt="Casio GP-510 Grand Hybrid Piano">
+                <div class="piano-info">
+                    <h3>Casio Grand Hybrid GP-510</h3>
+                    <span class="model">Celviano Grand Hybrid | Hợp tác với C. Bechstein</span>
+                    <p class="specs">Phím Natural Grand Hammer Action | Lấy mẫu Piano Berlin, Hamburg, Vienna.</p>
+                    <p class="piano-details">Phím cơ học được chế tạo bằng gỗ vân sam (Spruce) giống đàn cơ Bechstein. Cảm giác phím cực kỳ trung thực, mô phỏng hoàn hảo độ nặng và phản hồi.</p>
+                    <div class="piano-price">65,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+
+            <!-- 5. YAMAHA YDP-165 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXPXK73n6Ycl9BGT0SZtiWibhfllcVTOwARg&s" alt="Yamaha YDP-165 Digital Piano">
+                <div class="piano-info">
+                    <h3>Yamaha Arius YDP-165</h3>
+                    <span class="model">Arius Series | Piano Học Tập Tiêu Chuẩn</span>
+                    <p class="specs">Phím Graded Hammer 3 (GH3) | Công nghệ Virtual Resonance Modeling Lite (VRM Lite).</p>
+                    <p class="piano-details">Lựa chọn lý tưởng cho người mới bắt đầu và học sinh. Cảm ứng phím GH3 ba cảm biến và âm thanh Grand Piano Yamaha CFX chất lượng cao.</p>
+                    <div class="piano-price">28,500,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+
+            <!-- 6. ROLAND RP701 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJ6RpSzrgOb53gXWMEbMNn-PB2Na8CBoigw&s" alt="Roland RP701 Digital Piano">
+                <div class="piano-info">
+                    <h3>Roland RP701</h3>
+                    <span class="model">RP Series | Piano Thiết Kế Hiện Đại</span>
+                    <p class="specs">Phím PHA-4 Standard | Công nghệ SuperNATURAL Piano Modeling.</p>
+                    <p class="piano-details">Thiết kế mỏng gọn, tập trung vào tính năng giáo dục và kết nối Bluetooth. Âm thanh SuperNATURAL cung cấp độ chi tiết và biểu cảm cao.</p>
+                    <div class="piano-price">25,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+            
+            <!-- 7. KAWAI CN301 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://pianohouse.vn/image/cache/960x720/catalog/products/digital-piano/kawai-cn/cn301/cn301-b-04.jpg" alt="Kawai CN301 Digital Piano">
+                <div class="piano-info">
+                    <h3>Kawai CN301</h3>
+                    <span class="model">CN Series | Trung Cấp Đa Năng</span>
+                    <p class="specs">Phím Responsive Hammer III (RHIII) | Màn hình OLED.</p>
+                    <p class="piano-details">Cân bằng hoàn hảo giữa chất lượng phím RHIII (giả cơ) và âm thanh Shigeru Kawai EX. Thích hợp cho người chơi yêu cầu sự trung thực cao.</p>
+                    <div class="piano-price">45,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+            
+            <!-- 8. YAMAHA P-525 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://pianohouse.vn/image/cache/960x720/catalog/products/digital-piano/Yamaha%20P/Yamaha%20P525%202023/yamaha-p525-2.jpg" alt="Yamaha P-525 Portable Digital Piano">
+                <div class="piano-info">
+                    <h3>Yamaha P-525</h3>
+                    <span class="model">P-Series | Portable Piano Cao Cấp</span>
+                    <p class="specs">Phím GrandTouch-S™ | Thiết kế nhỏ gọn, dễ di chuyển.</p>
+                    <p class="piano-details">Đàn Piano điện di động cao cấp nhất của Yamaha. Dù nhỏ gọn nhưng vẫn sở hữu bộ phím gỗ GrandTouch-S™ và âm thanh CFX/Imperial.</p>
+                    <div class="piano-price">40,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+            
+            <!-- 9. CASIO AP-750 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://pianohouse.vn/image/cache/960x720/catalog/products/digital-piano/Casio/AP750/ap750-1.png" alt="Casio AP-750 Digital Piano">
+                <div class="piano-info">
+                    <h3>Casio Celviano AP-750</h3>
+                    <span class="model">Celviano Series | Piano Studio</span>
+                    <p class="specs">Phím Smart Hybrid Hammer Action (SH) | Mô phỏng 3 cây Grand Piano lịch sử.</p>
+                    <p class="piano-details">Thiết kế nắp đàn có thể mở ra để thay đổi âm thanh, tối ưu cho phòng khách hoặc studio. Âm thanh lấy mẫu từ Grand Piano nổi tiếng thế giới.</p>
+                    <div class="piano-price">48,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+            
+            <!-- 10. KORG G1 Air -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://pianosol.vn/wp-content/uploads/2023/04/korg-g1.jpg" alt="Korg G1 Air Digital Piano">
+                <div class="piano-info">
+                    <h3>Korg G1 Air</h3>
+                    <span class="model">Home Digital Piano | Thiết kế tinh tế</span>
+                    <p class="specs">Phím RH3 (Responsive Hammer 3) | Lấy mẫu 3 Grand Piano nổi tiếng.</p>
+                    <p class="piano-details">Thiết kế siêu mỏng và thanh lịch. Chất lượng âm thanh rõ ràng, phù hợp cho người chơi tìm kiếm cả âm nhạc và thẩm mỹ nội thất.</p>
+                    <div class="piano-price">32,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+
+            <!-- 11. ROLAND HP704 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://pianohouse.vn/image/cache/960x720/catalog/products/digital-piano/roland-hp/roland-hp-704-2.jpg" alt="Roland HP704 Digital Piano">
+                <div class="piano-info">
+                    <h3>Roland HP704</h3>
+                    <span class="model">HP Series | Thiết kế Cabinet cổ điển</span>
+                    <p class="specs">Phím PHA-50 Hybrid (Gỗ/Nhựa) | Công nghệ SuperNATURAL.</p>
+                    <p class="piano-details">Thiết kế truyền thống, loa ngoài mạnh mẽ, mang lại âm thanh lan tỏa. Bàn phím PHA-50 cho độ bền và cảm giác Grand Piano cao.</p>
+                    <div class="piano-price">41,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+
+            <!-- 12. YAMAHA CLP-745 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://pianosolna.com/upload/product/piano-yamaha-clp-745-4-9363.jpg" alt="Yamaha CLP-745 Digital Piano">
+                <div class="piano-info">
+                    <h3>Yamaha CLP-745</h3>
+                    <span class="model">Clavinova Series | Phím Gỗ</span>
+                    <p class="specs">Phím GrandTouch-S™ (Gỗ) | Bluetooth Audio & MIDI.</p>
+                    <p class="piano-details">Sở hữu bàn phím gỗ GrandTouch-S™ trong tầm giá trung cấp cao. Âm thanh CFX và Imperial, trải nghiệm Grand Piano cân bằng, toàn diện.</p>
+                    <div class="piano-price">56,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+            
+            <!-- 13. CASIO PX-S7000 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://vietthanh.vn/wp-content/uploads/2023/10/casio-px-s7000.webp" alt="Casio PX-S7000 Digital Piano">
+                <div class="piano-info">
+                    <h3>Casio Privia PX-S7000</h3>
+                    <span class="model">Privia Slim Series | Thiết kế Hiện đại</span>
+                    <p class="specs">Phím Smart Hybrid Hammer Action | Màu sắc hiện đại (Đen, Trắng, Vàng).</p>
+                    <p class="piano-details">Thiết kế siêu mỏng và sang trọng. Tích hợp chân đứng và pedal, phù hợp với nội thất tối giản, mang lại âm thanh chất lượng cao và kết nối không dây.</p>
+                    <div class="piano-price">37,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+            
+            <!-- 14. KAWAI ES920 -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-PV-R2G9a7QdD6aBJiccBry_NxJp1Trp5Ow&s" alt="Kawai ES920 Portable Digital Piano">
+                <div class="piano-info">
+                    <h3>Kawai ES920</h3>
+                    <span class="model">Portable Piano | Piano Biểu Diễn</span>
+                    <p class="specs">Phím Responsive Hammer III (RHIII) | Tích hợp âm thanh Shigeru Kawai EX.</p>
+                    <p class="piano-details">Piano điện di động lý tưởng cho việc biểu diễn và phòng thu. Chất lượng phím hàng đầu trong phân khúc Portable, âm thanh mạnh mẽ.</p>
+                    <div class="piano-price">26,500,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+            
+            <!-- 15. ROLAND FP-90X -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvS28uKgI-RaaHFkKHVr_z7CSuVDmTAf_uPw&s" alt="Roland FP-90X Portable Digital Piano">
+                <div class="piano-info">
+                    <h3>Roland FP-90X</h3>
+                    <span class="model">FP Series | Portable Piano Cao Cấp</span>
+                    <p class="specs">Phím PHA-50 Hybrid | Công nghệ SuperNATURAL, loa công suất lớn.</p>
+                    <p class="piano-details">Cung cấp âm thanh và cảm giác phím Hybrid chất lượng cao nhất trong dòng FP. Là lựa chọn số một cho nghệ sĩ biểu diễn cần tính di động.</p>
+                    <div class="piano-price">38,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+
+        </div> <!-- Kết thúc piano-grid -->
+
+        <div style="text-align: center; margin-top: 50px; padding: 30px; border: 1px dashed #00c49a; background-color: #f0ffff;">
+            <h3 style="color: #005f73;">Tư Vấn Chuyên Sâu & Đặt Hàng</h3>
+            <p>Giá trên là giá tham khảo. Piano điện luôn có nhiều phiên bản màu sắc và phụ kiện kèm theo. Vui lòng liên hệ để nhận báo giá chi tiết và các chương trình khuyến mãi tốt nhất.</p>
+            <a href="lienhe.html" class="btn-contact" style="background-color: #005f73;">Gọi ngay: (024) 2358723</a>
+        </div>
+
+    </div> <!-- Kết thúc collection-container -->
+
+    <div class="footer">
+        &copy; 2025 MELODY GRAND. Công nghệ âm nhạc đỉnh cao.
+    </div>
+
+</body>
+</html>

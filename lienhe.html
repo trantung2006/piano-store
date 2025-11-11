@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ Với Chúng Tôi - MELODY GRAND</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Font và Nền */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf8f8; /* Nền trắng hồng nhạt */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Màu sắc Chủ đạo & Nhấn */
+        .color-primary-text { color: #2c3e50; } /* Xám than */
+        .color-accent-gold { color: #a87932; } /* Vàng đồng */
+        .bg-primary { background-color: #f8eaea; } /* Nền Header/Section */
+
+        /* Header Tối giản */
+        .header-section {
+            padding: 4rem 0 6rem;
+            text-align: center;
+            background-color: #2c3e50; /* Nền Xám Than */
+            color: white;
+            position: relative;
+        }
+        .header-section h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+        .header-section .brand-name {
+            color: #a87932; /* Vàng đồng */
+        }
+
+        /* Thẻ Liên Hệ */
+        .contact-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 3rem 2rem;
+            transition: transform 0.3s;
+        }
+        .contact-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Form */
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e0d0d0;
+            border-radius: 8px;
+            margin-top: 4px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+            outline: none;
+            border-color: #a87932;
+            box-shadow: 0 0 0 3px rgba(168, 121, 50, 0.2);
+        }
+        .btn-submit {
+            background-color: #a87932;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: background-color 0.3s;
+        }
+        .btn-submit:hover {
+            background-color: #8c6529;
+        }
+        
+        /* Icon - Sử dụng SVG inline cho đẹp */
+        .icon-svg {
+            color: #a87932;
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header-section">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h1 class="text-white">Liên Hệ <span class="brand-name">MELODY GRAND</span></h1>
+            <p class="text-xl text-gray-300 mt-2 font-medium">Chúng tôi luôn sẵn lòng lắng nghe và hỗ trợ bạn.</p>
+        </div>
+    </div>
+
+    <!-- NỘI DUNG CHÍNH: THÔNG TIN VÀ FORM -->
+    <div class="container mx-auto px-4 py-16 max-w-7xl -mt-20">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            
+            <!-- Cột 1 & 2: FORM LIÊN HỆ -->
+            <div class="lg:col-span-2 contact-card bg-white p-8">
+                <h2 class="text-3xl font-bold color-primary-text mb-6">Gửi Tin Nhắn Cho Chúng Tôi</h2>
+                <p class="text-gray-600 mb-8">Vui lòng điền thông tin và câu hỏi của bạn. Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.</p>
+
+                <form onsubmit="event.preventDefault(); showThankYouMessage();" class="space-y-4">
+                    <!-- Tên và Email -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Họ và Tên</label>
+                            <input type="text" id="name" name="name" required placeholder="Nguyễn Văn A">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Địa chỉ Email</label>
+                            <input type="email" id="email" name="email" required placeholder="vana@example.com">
+                        </div>
+                    </div>
+
+                    <!-- Chủ đề -->
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700">Chủ đề</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Hỏi về loại đàn Piano mà bạn mong muốn">
+                    </div>
+
+                    <!-- Nội dung -->
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Nội dung chi tiết</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Xin chào, tôi muốn biết thêm thông tin về..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Gửi Yêu Cầu Hỗ Trợ
+                    </button>
+                    
+                    <div id="thank-you-message" class="mt-4 p-4 rounded-lg text-white font-semibold hidden" style="background-color: #388e3c;">
+                        Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công. Chúng tôi sẽ liên hệ lại sớm nhất.
+                    </div>
+                </form>
+            </div>
+
+            <!-- Cột 3: THÔNG TIN LIÊN HỆ CƠ SỞ -->
+            <div class="contact-card bg-primary p-8 lg:p-6 flex flex-col space-y-8">
+                <h2 class="text-3xl font-bold color-primary-text mb-4">Thông Tin Cơ Sở</h2>
+
+                <!-- Địa chỉ -->
+                <div class="flex items-start">
+                    <svg class="icon-svg mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <div>
+                        <p class="font-bold text-gray-800">Địa Chỉ Chính</p>
+                        <p class="text-gray-600">Lầu 3, Tòa nhà Sonata, 123 Đường Nguyễn Tuân, Quận Thanh Xuân, TP. Hà Nội</p>
+                    </div>
+                </div>
+
+                <!-- Điện thoại -->
+                <div class="flex items-start">
+                    <svg class="icon-svg mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4.41L15.59 0 12 3.59 8.41 0 4 4.41 0 8.82 4.41 13.23 0 17.64 4.41 22 8.82 17.59 13.23 22 17.64 17.59 22 13.23 17.59 8.82zM12 18.5c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+                    <div>
+                        <p class="font-bold text-gray-800">Điện Thoại & Hỗ Trợ</p>
+                        <p class="text-gray-600">Hotline: 0334135494 (8h00 - 17h00)</p>
+                        <p class="text-gray-600">Di động: 0987 654 321</p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="flex items-start">
+                    <svg class="icon-svg mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <div>
+                        <p class="font-bold text-gray-800">Email Liên Lạc</p>
+                        <p class="text-gray-600">info@melodygrand.edu.vn</p>
+                        <p class="text-gray-600">tuyensinh@melodygrand.edu.vn</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BẢN ĐỒ PLACEHOLDER -->
+        <div class="mt-16 bg-white p-4 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold color-primary-text mb-6 border-b-2 border-gray-200 pb-3">Vị Trí Của Chúng Tôi</h2>
+            <div class="relative w-full overflow-hidden rounded-lg" style="height: 400px;">
+                <!-- Placeholder cho bản đồ Google Maps -->
+                <img src="https://cdn.tgdd.vn/Files/2020/06/18/1263925/giaodien_600x657.jpg" alt="Bản đồ học viện" class="w-full h-full object-cover opacity-80">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
+                     <p class="text-white text-2xl font-semibold p-4 border-2 border-white rounded-lg">Bản Đồ Địa Chỉ (Placeholder)</p>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- Kết thúc container -->
+
+    <!-- FOOTER -->
+    <div class="text-center py-8 mt-12 text-white" style="background-color: #2c3e50;">
+        <p class="text-lg font-semibold mb-2">MELODY GRAND - Nâng Tầm Âm Nhạc Việt</p>
+        <p class="text-gray-400">&copy; 2025 Học viện Piano MELODY GRAND. Mọi quyền được bảo lưu.</p>
+    </div>
+
+    <script>
+        // Hàm hiển thị thông báo cảm ơn (thay thế cho việc gửi form thực tế)
+        function showThankYouMessage() {
+            const thankYou = document.getElementById('thank-you-message');
+            thankYou.classList.remove('hidden');
+            
+            // Xóa form sau 5 giây và ẩn thông báo
+            setTimeout(() => {
+                thankYou.classList.add('hidden');
+                // Đặt lại form sau khi gửi thành công
+                document.querySelector('form').reset();
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

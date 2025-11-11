@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Sưu Tập Grand Piano - MELODY GRAND</title>
+    <style>
+        /* CSS CHUNG VÀ FONT */
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Nền trắng ngà */
+        }
+        .header {
+            background-color: #2c3e50; /* Xanh than */
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 5px solid #a87932; /* Vàng đồng */
+        }
+        
+        /* CSS CHO LOGO */
+        .header-logo {
+            display: block;
+            margin: 0 auto 15px auto; /* Center and add margin below */
+            width: 150px; /* Kích thước logo */
+            height: auto;
+            border-radius: 50%; /* Hình tròn */
+            border: 3px solid #a87932; /* Viền vàng đồng */
+        }
+
+        .header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3em;
+            margin: 0;
+            letter-spacing: 3px;
+        }
+        .header p {
+            font-size: 1.1em;
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        /* CONTAINER CHÍNH CHO BỘ SƯU TẬP */
+        .collection-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* GRID CHO CÁC SẢN PHẨM PIANO */
+        .piano-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tối ưu hóa cho responsive */
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        /* THẺ SẢN PHẨM */
+        .piano-card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .piano-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .piano-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .piano-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .piano-info h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .piano-info .model {
+            color: #a87932;
+            font-style: italic;
+            font-weight: normal;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .piano-price {
+            font-size: 1.8em;
+            color: #a87932; /* Màu vàng đồng nổi bật */
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .piano-details {
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            background-color: #a87932;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn-contact:hover {
+            background-color: #8c6020;
+        }
+
+        /* PHẦN FOOTER (Tối giản) */
+        .footer {
+            background-color: #2c3e50;
+            color: #aaa;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <!-- LOGO ĐƯỢC THÊM VÀO ĐÂY -->
+        <img class="header-logo" src="https://previews.123rf.com/images/wangsinawang/wangsinawang1807/wangsinawang180700269/106296156-grand-piano-logo-music-media-design-template-vector-design-best-use-for-store-application-shop.jpg" alt="MELODY GRAND Logo">
+        
+        <h1>GRAND PIANO</h1>
+        <p>Tuyệt tác âm nhạc, di sản vượt thời gian.</p>
+    </div>
+
+    <div class="collection-container">
+        <h2><p style="text-align: center; margin-bottom: 40px; color: #555;">Bộ Sưu Tập Độc Quyền MELODY GRAND</p></h2>
+        <p style="text-align: center; margin-bottom: 40px; color: #555;">Mỗi cây đàn được tuyển chọn kỹ lưỡng, đảm bảo chất lượng âm thanh hoàn hảo và giá trị nghệ thuật cao nhất.</p>
+
+        <div class="piano-grid">
+
+            <!-- PIANO 1: YAMAHA C3 GRAND -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://pianohouse.vn/image/cache/960x720/catalog/products/grand-piano/yamaha-g-c-used/C3White/dan-grand-piano-yamaha-c3-white-mau-trang-1.jpg" alt="Yamaha C3 Grand Piano">
+                <div class="piano-info">
+                    <h3>Yamaha C3 Grand</h3>
+                    <span class="model">Kích thước: 6'1" (186 cm) | Tình trạng: Đã phục hồi</span>
+                    <p class="piano-details">Mẫu Grand Piano tiêu chuẩn phòng thu, nổi tiếng với âm thanh cân bằng, vang dội và độ nhạy phím tuyệt vời. Lựa chọn lý tưởng cho các studio chuyên nghiệp và phòng khách lớn.</p>
+                    <div class="piano-price">850,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+
+            <!-- PIANO 2: KAWAI RX-5 GRAND -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://pianohouse.vn/image/cache/960x720/catalog/products/grand-piano/kawai-rx/RX3/rx-3-01.png" alt="Kawai RX-5 Grand Piano">
+                <div class="piano-info">
+                    <h3>Kawai RX-5 Grand</h3>
+                    <span class="model">Kích thước: 6'6" (197 cm) | Tình trạng: Nguyên bản cao cấp</span>
+                    <p class="piano-details">Dòng RX Series mang đến âm trầm ấm, sâu lắng đặc trưng của Kawai. Bộ máy Millennium III Carbon ABS cho phản hồi tốc độ cao và độ bền vượt trội.</p>
+                    <div class="piano-price">1,150,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+            
+            <!-- PIANO 3: STEINWAY & SONS MODEL O -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx9sctD0wFgzsfdIiFI5b6xp2PLHhqRiVnnA&s" alt="Steinway Model O Grand Piano">
+                <div class="piano-info">
+                    <h3>Steinway Model O</h3>
+                    <span class="model">Kích thước: 5'10" (180 cm) | Tình trạng: Cổ điển (Vintage)</span>
+                    <p class="piano-details">Một trong những cây đàn Grand Piano cỡ nhỏ được yêu thích nhất của Steinway. Chất âm trữ tình, phong phú và khả năng biểu cảm không giới hạn. Tác phẩm nghệ thuật dành cho người sưu tầm.</p>
+                    <div class="piano-price">GIÁ LIÊN HỆ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+
+            <!-- PIANO 4: BALDWIN MODEL L ARTIST GRAND -->
+            <div class="piano-card">
+                <img class="piano-image" src="https://steinwaygrand.com/cdn/shop/products/00K0K_3EzKJ7puKJI_600x450_cc92eaeb-1bda-4a53-9d62-4fb476d27523.jpg?v=1641906239" alt="Baldwin Model L Grand Piano">
+                <div class="piano-info">
+                    <h3>Baldwin Model L Artist</h3>
+                    <span class="model">Kích thước: 6'3" (190 cm) | Tình trạng: Đã kiểm định</span>
+                    <p class="piano-details">Được mệnh danh là "American Sound" (Âm thanh Mỹ). Mang lại âm lượng mạnh mẽ và độ trong trẻo, phù hợp cho nhạc jazz, blues và biểu diễn lớn.</p>
+                    <div class="piano-price">690,000,000 VNĐ</div>
+                    <a href="lienhe.html" class="btn-contact">Liên hệ Tư vấn</a>
+                </div>
+            </div>
+
+        </div> <!-- Kết thúc piano-grid -->
+
+        <div style="text-align: center; margin-top: 50px; padding: 30px; border: 1px dashed #a87932; background-color: #fffaf0;">
+            <h3 style="color: #2c3e50;">Tư Vấn Chuyên Sâu</h3>
+            <p>Giá trên là giá tham khảo. Vui lòng liên hệ để được nghệ nhân Piano của chúng tôi tư vấn chi tiết về lịch sử, tình trạng, và các lựa chọn tài chính phù hợp với bạn.</p>
+            <a href="lienhe.html" class="btn-contact" style="background-color: #2c3e50;">Gọi ngay: (024) 2358723</a>
+        </div>
+
+    </div> <!-- Kết thúc collection-container -->
+
+    <div class="footer">
+        &copy; 2025 MELODY GRAND. Đẳng cấp Piano cơ.
+    </div>
+
+</body>
+</html>

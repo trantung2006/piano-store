@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức & Sự Kiện - MELODY GRAND</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Font và Nền */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf8f8; /* Nền trắng hồng nhạt */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Màu sắc Chủ đạo & Nhấn */
+        .color-primary-text { color: #2c3e50; } /* Xám than */
+        .color-accent-gold { color: #a87932; } /* Vàng đồng */
+        .bg-primary { background-color: #f8eaea; } /* Nền Header */
+        
+        /* HEADER */
+        .header-section {
+            padding: 3.5rem 0;
+            text-align: center;
+            background-color: #f8eaea; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .header-section h1 {
+            font-size: 3.8rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            line-height: 1;
+        }
+        .header-section .brand-name {
+            color: #a87932; /* Vàng đồng cho tên thương hiệu */
+        }
+
+        /* Định dạng bài viết */
+        .article-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #f0d0d0;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .article-title {
+             color: #2c3e50;
+             transition: color 0.3s;
+        }
+
+        .article-card:hover .article-title {
+            color: #a87932; /* Đổi màu tiêu đề khi hover */
+        }
+        
+        /* Nút xem thêm */
+        .btn-read-more {
+            display: inline-block;
+            margin-top: auto; /* Đẩy nút xuống dưới cùng */
+            padding: 10px 18px;
+            background-color: #a87932;
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .btn-read-more:hover {
+            background-color: #8c6529;
+        }
+
+        /* Bài viết nổi bật */
+        .featured-article {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            border: 3px solid #a87932; /* Viền Vàng Đồng dày hơn */
+        }
+        
+        @media (max-width: 1024px) {
+            .featured-article {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 2.8rem; }
+            .header-section p { font-size: 1rem; }
+            .featured-article { margin-bottom: 4rem !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header-section">
+        <h1>Tin Tức <span class="brand-name">MELODY GRAND</span></h1>
+        <p class="text-xl text-gray-600 mt-2 font-medium">Cập nhật nhanh nhất về Thế giới Piano, Nghệ thuật và Giáo dục Âm nhạc.</p>
+    </div>
+
+    <div class="container mx-auto px-4 py-16 max-w-7xl">
+
+        <!-- BÀI VIẾT NỔI BẬT (FEATURED ARTICLE) -->
+        <h2 class="text-3xl font-bold color-primary-text mb-8 border-b-4 border-gray-200 pb-3">ĐIỂM TIN NỔI BẬT</h2>
+        <div class="featured-article mb-20">
+            <div class="lg:w-7/12">
+                <img class="w-full h-96 object-cover" 
+                     src="https://pianofingers.vn/wp-content/uploads/2020/12/nghe-si-piano-viet-nam-luu-hong-quang-3.jpg" 
+                     alt="Nghệ sĩ Piano biểu diễn"
+                     onerror="this.onerror=null; this.src='https://placehold.co/1000x700/f8eaea/a87932?text=NGHỆ+SĨ+BIỂU+DIỄN';"
+                >
+            </div>
+            <div class="lg:w-5/12 p-8 flex flex-col justify-center">
+                <p class="text-sm color-accent-gold font-semibold mb-2 uppercase tracking-wider">SỰ KIỆN & CỘNG ĐỒNG | 20/11/2025</p>
+                <h3 class="text-3xl md:text-4xl font-extrabold color-primary-text mb-4 leading-tight article-title">Gala Đêm Nhạc "Giai Điệu Vàng" - Vang Lên Những Giai Điệu Cảm Xúc</h3>
+                <p class="text-gray-700 mb-6 text-base lg:text-lg">Hàng trăm học viên MELODY GRAND đã có một đêm diễn thành công rực rỡ, thể hiện sự trưởng thành trong kỹ thuật và tâm hồn âm nhạc trước hội đồng chuyên môn quốc tế.</p>
+                <a href="#" class="btn-read-more w-full md:w-auto text-center text-sm" style="background-color: #8c6529;">XEM TOÀN BỘ ALBUM</a>
+            </div>
+        </div>
+
+        <!-- TIN TỨC MỚI NHẤT -->
+        <h2 class="text-3xl font-bold color-primary-text mb-10 border-b-4 border-gray-200 pb-3">TIN TỨC VÀ LỜI KHUYÊN</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <!-- Bài 1: Kỹ thuật -->
+            <div class="article-card">
+                <img class="w-full h-56 object-cover" 
+                     src="https://vn.yamaha.com/vi/files/bai-tap-luyen-dan-piano-tap-trung-vao-ngu-cung_277e43ae85678581bd7b447cb61114b7.jpg" 
+                     alt="Luyện ngón piano"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/e0e0f8/2c3e50?text=LUYỆN+NGÓN+CHUYÊN+SÂU';"
+                >
+                <div class="p-6 flex flex-col flex-grow">
+                    <p class="text-xs text-gray-500 mb-2 uppercase tracking-wider">KỸ THUẬT & HỌC TẬP | 15/11/2025</p>
+                    <h3 class="text-xl font-bold mb-3 article-title">5 Phương Pháp Luyện Ngón Giúp Tăng Tốc Độ Gấp Đôi</h3>
+                    <p class="text-gray-600 mb-4 flex-grow text-sm">Khám phá các bài tập Czerny và Hanon chuyên biệt được áp dụng bởi các nghệ sĩ biểu diễn quốc tế.</p>
+                    <a href="#" class="btn-read-more text-sm w-full md:w-auto">Đọc Tiếp</a>
+                </div>
+            </div>
+
+            <!-- Bài 2: Nhạc lý -->
+            <div class="article-card">
+                <img class="w-full h-56 object-cover" 
+                     src="https://i0.wp.com/mcma.training/wp-content/uploads/2024/07/nhac-ly-la-gi-1.jpg?fit=800%2C533&ssl=1" 
+                     alt="Hòa âm Jazz"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/fff0e0/a87932?text=HÒA+ÂM+JAZZ';"
+                >
+                <div class="p-6 flex flex-col flex-grow">
+                    <p class="text-xs text-gray-500 mb-2 uppercase tracking-wider">LÝ THUYẾT ÂM NHẠC | 10/11/2025</p>
+                    <h3 class="text-xl font-bold mb-3 article-title">Tầm Quan Trọng Của Vòng Hòa Âm II-V-I Trong Jazz</h3>
+                    <p class="text-gray-600 mb-4 flex-grow text-sm">Phân tích vòng hòa âm căn bản nhất trong Jazz, cách nhận diện và ứng dụng nó trong đệm hát.</p>
+                    <a href="#" class="btn-read-more text-sm w-full md:w-auto">Đọc Tiếp</a>
+                </div>
+            </div>
+
+            <!-- Bài 3: Công cụ -->
+            <div class="article-card">
+                <img class="w-full h-56 object-cover" 
+                     src="https://pianotanbinh.com/wp-content/uploads/2021/11/dan-piano-dien-Yamaha-CLP545-R-1-scaled.jpg" 
+                     alt="Đàn Piano Điện"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/e8f8e8/388e3c?text=ĐÀN+PIANO+ĐIỆN';"
+                >
+                <div class="p-6 flex flex-col flex-grow">
+                    <p class="text-xs text-gray-500 mb-2 uppercase tracking-wider">ĐÁNH GIÁ THIẾT BỊ | 05/11/2025</p>
+                    <h3 class="text-xl font-bold mb-3 article-title">Top 3 Dòng Piano Điện Phù Hợp Cho Người Mới Bắt Đầu</h3>
+                    <p class="text-gray-600 mb-4 flex-grow text-sm">Đánh giá chi tiết về độ nhạy phím, chất lượng âm thanh và các tính năng bổ sung của các mẫu đàn.</p>
+                    <a href="#" class="btn-read-more text-sm w-full md:w-auto">Đọc Tiếp</a>
+                </div>
+            </div>
+            
+             <!-- Bài 4: Phong cách sống -->
+            <div class="article-card">
+                <img class="w-full h-56 object-cover" 
+                     src="https://sunnydays.vn/userfiles/images/Quan-ly-tien-ich/Bi-quyet/5-cach-duy-tri-dong-luc-hoc-piano-hieu-qua-cho-nguoi-lon/67.jpg" 
+                     alt="Học tập tập trung"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/f0f0ff/6a5acd?text=TẬP+TRUNG';"
+                >
+                <div class="p-6 flex flex-col flex-grow">
+                    <p class="text-xs text-gray-500 mb-2 uppercase tracking-wider">PHONG CÁCH SỐNG | 01/11/2025</p>
+                    <h3 class="text-xl font-bold mb-3 article-title">Bí Quyết Giữ Động Lực Luyện Tập Piano Hàng Ngày</h3>
+                    <p class="text-gray-600 mb-4 flex-grow text-sm">Làm thế nào để biến việc luyện tập thành một thói quen thú vị thay vì một gánh nặng?</p>
+                    <a href="#" class="btn-read-more text-sm w-full md:w-auto">Đọc Tiếp</a>
+                </div>
+            </div>
+            
+             <!-- Bài 5: Lịch sử -->
+            <div class="article-card">
+                <img class="w-full h-56 object-cover" 
+                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjzO5z63prHdpPZdIuOiN2UQZW5N039aOFzA&s" 
+                     alt="Hình ảnh Beethoven"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/ffe0e0/c70039?text=BEETHOVEN';"
+                >
+                <div class="p-6 flex flex-col flex-grow">
+                    <p class="text-xs text-gray-500 mb-2 uppercase tracking-wider">CHÂN DUNG NGHỆ SĨ | 28/10/2025</p>
+                    <h3 class="text-xl font-bold mb-3 article-title">Beethoven: Thiên Tài Bị Lãng Quên Trong Chính Thời Đại Của Mình</h3>
+                    <p class="text-gray-600 mb-4 flex-grow text-sm">Một cái nhìn sâu sắc về cuộc đời và sự nghiệp của Ludwig van Beethoven, người đã định hình lại lịch sử âm nhạc.</p>
+                    <a href="#" class="btn-read-more text-sm w-full md:w-auto">Đọc Tiếp</a>
+                </div>
+            </div>
+            
+             <!-- Bài 6: Thông báo -->
+            <div class="article-card">
+                <img class="w-full h-56 object-cover" 
+                     src="https://musictalent.edu.vn/wp-content/uploads/2025/07/514005904_1052366043628378_1046894129259531743_n.jpg" 
+                     alt="Cuộc thi Piano"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/f0f0f0/666666?text=CUỘC+THI+PIANO';"
+                >
+                <div class="p-6 flex flex-col flex-grow">
+                    <p class="text-xs text-gray-500 mb-2 uppercase tracking-wider">THÔNG BÁO | 25/10/2025</p>
+                    <h3 class="text-xl font-bold mb-3 article-title">Mở Đăng Ký Cuộc Thi Piano Tài Năng Trẻ MELODY GRAND 2026</h3>
+                    <p class="text-gray-600 mb-4 flex-grow text-sm">Cơ hội để các tài năng trẻ thể hiện kỹ năng. Giải thưởng và học bổng hấp dẫn đang chờ đón! </p>
+                    <a href="#" class="btn-read-more text-sm w-full md:w-auto">Đăng Ký</a>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- Kết thúc container -->
+
+    <!-- FOOTER -->
+    <div class="text-center py-8 mt-20 text-white" style="background-color: #2c3e50;">
+        <p class="text-lg font-semibold mb-2">MELODY GRAND - Nâng Tầm Âm Nhạc Việt</p>
+        <p class="text-gray-400">&copy; 2025 Học viện Piano MELODY GRAND. Mọi quyền được bảo lưu.</p>
+    </div>
+
+</body>
+</html>

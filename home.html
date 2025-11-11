@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody Grand - Thiên Đường Piano Chính Hãng</title>
+    <!-- Tải Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eedddd;
+        }
+        .text-gold {
+            color: #b8860b; /* Màu vàng đồng */
+        }
+        .bg-gold {
+            background-color: #b8860b;
+        }
+        .border-gold {
+            border-color: #b8860b;
+        }
+        .nav-link:hover {
+            color: #b8860b;
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3">
+                    <!-- Sử dụng hình ảnh logo bạn đã cung cấp -->
+                    <img src="https://previews.123rf.com/images/wangsinawang/wangsinawang1807/wangsinawang180700269/106296156-grand-piano-logo-music-media-design-template-vector-design-best-use-for-store-application-shop.jpg" onerror="this.onerror=null;this.src='data:image/jpeg;base64,...(logo_base64_data)...';" alt="Melody Grand Logo" class="h-16 w-auto object-contain">
+                    <span class="text-4xl font-extrabold tracking-widest text-gray-900 uppercase">MELODY GRAND</span>
+                </a>
+<nav class="hidden md:flex space-x-4 font-medium items-center">
+    <a href="gioithieu.html" class="text-gray-800 nav-link px-3 py-1 border border-gold/50 rounded-lg bg-white hover:border-gold hover:text-gold hover:bg-gold/20 transition duration-150">Giới Thiệu</a>
+    <a href="grandpiano.html" class="text-gray-800 nav-link px-3 py-1 border border-gold/50 rounded-lg bg-white hover:border-gold hover:text-gold hover:bg-gold/20 transition duration-150">Grand Piano</a>
+    <a href="pianodien.html" class="text-gray-800 nav-link px-3 py-1 border border-gold/50 rounded-lg bg-white hover:border-gold hover:text-gold hover:bg-gold/20 transition duration-150">Piano Điện</a>
+    <a href="pianoco.html" class="text-gray-800 nav-link px-3 py-1 border border-gold/50 rounded-lg bg-white hover:border-gold hover:text-gold hover:bg-gold/20 transition duration-150">Piano Cơ</a>
+    <a href="hoctap.html" class="text-gray-800 nav-link px-3 py-1 border border-gold/50 rounded-lg bg-white hover:border-gold hover:text-gold hover:bg-gold/20 transition duration-150">Học Tập</a>
+    <a href="tintuc.html" class="text-gray-800 nav-link px-3 py-1 border border-gold/50 rounded-lg bg-white hover:border-gold hover:text-gold hover:bg-gold/20 transition duration-150">Tin Tức</a>
+    <a href="lienhe.html" class="ml-4 px-4 py-2 rounded-full bg-gold text-white font-semibold shadow-md hover:bg-yellow-700 transition duration-300">Liên Hệ</a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gold focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+                <a href="gioithieu.html" class="text-gray-600 hover:text-gold block px-3 py-2 rounded-md text-base font-medium">Giới Thiệu</a>
+                <a href="grandpiano.html" class="text-gray-600 hover:text-gold block px-3 py-2 rounded-md text-base font-medium">Grand Piano</a>
+                <a href="pianodien.html" class="text-gray-600 hover:text-gold block px-3 py-2 rounded-md text-base font-medium">Piano Điện</a>
+                <a href="pianoco.html" class="text-gray-600 hover:text-gold block px-3 py-2 rounded-md text-base font-medium">Piano Cơ</a>
+                <a href="hoctap.html" class="text-gray-600 hover:text-gold block px-3 py-2 rounded-md text-base font-medium">Học Tập</a>
+                <a href="tintuc.html" class="text-gray-600 hover:text-gold block px-3 py-2 rounded-md text-base font-medium">Tin Tức</a>
+                <a href="lienhe.html" class="w-2/3 mt-2 px-4 py-2 text-center rounded-full bg-gold text-white font-semibold shadow-md hover:bg-yellow-700 transition duration-300">Liên Hệ</a>
+    </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section (Phần nổi bật) -->
+        <section class="relative bg-gray-900 text-white h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+            <!-- Hình nền (thay thế bằng ảnh piano chất lượng cao) -->
+            <img src="https://png.pngtree.com/background/20250108/original/pngtree-background-of-piano-keyboard-close-up-electronic-piano-keys-picture-image_15519367.jpg" alt="Grand Piano Background" class="absolute inset-0 w-full h-full object-cover opacity-60">
+
+            <div class="relative z-10 text-center p-6 bg-black bg-opacity-40 rounded-xl max-w-4xl mx-auto shadow-2xl">
+                <h1 class="text-5xl md:text-7xl font-light tracking-wide mb-4 animate-pulse">
+                    <span class="text-gold font-bold">MELODY</span> GRAND
+                </h1>
+                <p class="text-xl md:text-3xl font-light italic mb-8">
+                    Nơi Âm Nhạc Là Nguồn Sống Của Bạn.
+                </p>
+                <a href="#grand-piano" class="inline-block px-8 py-3 text-lg font-semibold rounded-full bg-gold text-gray-900 hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-xl">
+                    Khám Phá Bộ Sưu Tập
+                </a>
+            </div>
+        </section>
+
+        <!-- Giới Thiệu (Phần 1) -->
+        <section id="gioi-thieu" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-xl shadow-xl -mt-10 relative z-20 mb-12">
+            <div class="text-center">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4 border-b-2 border-gold inline-block pb-1">Giới Thiệu</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Hơn một thập kỷ, Melody Grand tự hào là điểm đến tin cậy, cung cấp những cây đàn piano chất lượng hàng đầu thế giới, từ cổ điển đến hiện đại, phục vụ mọi đam mê âm nhạc.</p>
+            </div>
+            <div class="mt-12 grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 rounded-lg border border-gray-200 hover:shadow-2xl transition duration-500 transform hover:-translate-y-1">
+                    <div class="text-gold mb-3 mx-auto w-12 h-12 flex items-center justify-center border-2 border-gold rounded-full">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002 15c0 1.558.38 3.016 1.05 4.358L2 21l3.6-1.5c1.444.695 3.031 1.05 4.7 1.05 6.627 0 12-4.477 12-10S18.627 3 12 3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Uy Tín & Chất Lượng</h3>
+                    <p class="text-gray-500">Đàn piano nhập khẩu 100%, có chứng nhận CO, CQ đầy đủ.</p>
+                </div>
+                <div class="p-6 rounded-lg border border-gray-200 hover:shadow-2xl transition duration-500 transform hover:-translate-y-1">
+                    <div class="text-gold mb-3 mx-auto w-12 h-12 flex items-center justify-center border-2 border-gold rounded-full">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V6m0 10v-2"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-9 2 2-9 9-2 2 9z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Giá Trị Vượt Trội</h3>
+                    <p class="text-gray-500">Mức giá cạnh tranh, chính sách bảo hành, hậu mãi chu đáo.</p>
+                </div>
+                <div class="p-6 rounded-lg border border-gray-200 hover:shadow-2xl transition duration-500 transform hover:-translate-y-1">
+                    <div class="text-gold mb-3 mx-auto w-12 h-12 flex items-center justify-center border-2 border-gold rounded-full">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-5a2 2 0 00-2-2h-2a2 2 0 00-2 2v5zM10 20h5v-5a2 2 0 00-2-2h-2a2 2 0 00-2 2v5zM3 20h5v-5a2 2 0 00-2-2H5a2 2 0 00-2 2v5z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Đội Ngũ Chuyên Nghiệp</h3>
+                    <p class="text-gray-500">Kỹ thuật viên được đào tạo chuyên sâu, hỗ trợ 24/7.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories (Các loại đàn) -->
+        <section class="py-16 md:py-20 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">Bộ Sưu Tập Đàn Piano</h2>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Grand Piano -->
+                    <div id="grand-piano" class="bg-white rounded-xl shadow-xl overflow-hidden group">
+                        <img src="https://tongkhonhaccu.com/Data/upload/images/Product/Piano/Piano%20c%C6%A1/yamaha/G1BK/dan-grand-piano-yamaha-g1bk-chinh-hang.jpg" alt="Grand Piano" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-6 text-center">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Grand Piano</h3>
+                            <p class="text-gray-600 mb-4">Biểu tượng của sự sang trọng và âm thanh tuyệt đỉnh. Lựa chọn cho phòng hòa nhạc và không gian lớn.</p>
+                            <a href="#" class="inline-block text-gold font-semibold border-b border-gold pb-1 hover:text-yellow-700 transition duration-300">Xem Chi Tiết &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Piano Điện (Digital Piano) -->
+                    <div id="digital-piano" class="bg-white rounded-xl shadow-xl overflow-hidden group">
+                        <img src="https://cuahangnhaccuhn.com/files/assets/piano_ce88.jpg" alt="Digital Piano" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-6 text-center">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Piano Điện</h3>
+                            <p class="text-gray-600 mb-4">Sự kết hợp hoàn hảo giữa âm thanh cổ điển và công nghệ hiện đại. Phù hợp cho căn hộ và người mới học.</p>
+                            <a href="#" class="inline-block text-gold font-semibold border-b border-gold pb-1 hover:text-yellow-700 transition duration-300">Xem Chi Tiết &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Piano Cơ (Acoustic Piano) -->
+                    <div id="acoustic-piano" class="bg-white rounded-xl shadow-xl overflow-hidden group">
+                        <img src="https://pianotanbinh.com/wp-content/uploads/2024/08/dan-Piano-co-Yamaha-U1H-7-scaled.jpg" alt="Acoustic Piano" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-6 text-center">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Piano Cơ</h3>
+                            <p class="text-gray-600 mb-4">Mang lại trải nghiệm âm thanh mộc mạc, chân thực nhất. Lựa chọn truyền thống và lâu bền.</p>
+                            <a href="#" class="inline-block text-gold font-semibold border-b border-gold pb-1 hover:text-yellow-700 transition duration-300">Xem Chi Tiết &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Học Tập & Khóa Học (Phần 4) -->
+        <section id="hoc-tap" class="py-16 md:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">Học Tập & Phát Triển Tài Năng</h2>
+
+            <div class="flex flex-col md:flex-row bg-white rounded-xl shadow-2xl overflow-hidden">
+                <div class="md:w-1/2 p-8 md:p-12">
+                    <p class="text-sm font-semibold text-gold mb-2 uppercase tracking-wider">Khóa Học Độc Quyền</p>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Chương Trình Đào Tạo Piano Chuyên Sâu</h3>
+                    <p class="text-gray-600 mb-6">Melody Grand không chỉ bán đàn, chúng tôi còn cung cấp các khóa học chất lượng cao, từ cơ bản đến nâng cao, giúp bạn làm chủ cây đàn mơ ước của mình một cách nhanh chóng và hiệu quả.</p>
+                    <ul class="space-y-3 text-gray-700 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Giáo trình quốc tế, giáo viên giàu kinh nghiệm.
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Học thực hành trực tiếp trên đàn Grand.
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Chứng chỉ hoàn thành khóa học được công nhận.
+                        </li>
+                    </ul>
+                    <a href="#" class="inline-block px-6 py-3 font-semibold rounded-full bg-gray-900 text-white hover:bg-gold transition duration-300">Đăng Ký Ngay</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://pianoductri.com/wp-content/uploads/2024/07/phuong-phap-giang-day.jpg" alt="Lớp học piano" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Tin Tức (Phần 5) -->
+        <section id="tin-tuc" class="py-16 md:py-20 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">Tin Tức & Sự Kiện</h2>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Bài viết 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <img src="https://nhaccuantonmusic.com/wp-content/uploads/2023/04/7_loi_ich_cua_viec_cho_be_hoc_piano_cang_som_cang_tot_1_e32bf59622.jpeg" alt="Tin tức 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-gold font-medium mb-1 block">Tin Tức Đàn Piano</span>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">5 Lợi Ích Tuyệt Vời Của Việc Chơi Piano Hàng Ngày</h3>
+                            <p class="text-gray-600 text-sm">Chơi piano không chỉ là một hoạt động giải trí mà còn giúp tăng cường khả năng tập trung và giảm căng thẳng...</p>
+                            <a href="#" class="mt-4 inline-block text-gold font-semibold text-sm hover:text-yellow-700">Đọc thêm &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Bài viết 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTs1AaoG4aRyA4w6NZTNyl-8Pe_sTaBQjFQw&s" alt="Tin tức 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-gold font-medium mb-1 block">Sự Kiện Âm Nhạc</span>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Đêm Hòa Nhạc "Giai Điệu Vàng" Tại Sân Khấu Lớn</h3>
+                            <p class="text-gray-600 text-sm">Thông tin chi tiết về đêm hòa nhạc sắp tới với sự góp mặt của các nghệ sĩ piano hàng đầu Việt Nam...</p>
+                            <a href="#" class="mt-4 inline-block text-gold font-semibold text-sm hover:text-yellow-700">Đọc thêm &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Bài viết 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <img src="https://pianohouse.vn/image/cache/960x720/catalog/products/digital-piano/yamaha-clp/700%20Series/clp-785-pw-1.jpg" alt="Tin tức 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-gold font-medium mb-1 block">Review Sản Phẩm</span>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Đánh Giá Chi Tiết Piano Điện Yamaha CLP-785</h3>
+                            <p class="text-gray-600 text-sm">Xem xét chuyên sâu về các tính năng, âm thanh và cảm giác phím của mẫu đàn digital piano cao cấp nhất...</p>
+                            <a href="#" class="mt-4 inline-block text-gold font-semibold text-sm hover:text-yellow-700">Đọc thêm &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+            <!-- Cột 1: Logo và Mô tả -->
+            <div>
+                <h3 class="text-2xl font-extrabold text-gold mb-4">MELODY GRAND</h3>
+                <p class="text-gray-400 text-sm">Cung cấp các sản phẩm đàn piano chính hãng, chất lượng cao và dịch vụ chăm sóc khách hàng tận tâm.</p>
+            </div>
+
+            <!-- Cột 2: Danh mục -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Danh Mục</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#grand-piano" class="text-gray-400 hover:text-gold transition duration-200">Grand Piano</a></li>
+                    <li><a href="#digital-piano" class="text-gray-400 hover:text-gold transition duration-200">Piano Điện</a></li>
+                    <li><a href="#acoustic-piano" class="text-gray-400 hover:text-gold transition duration-200">Piano Cơ</a></li>
+                    <li><a href="#hoc-tap" class="text-gray-400 hover:text-gold transition duration-200">Khóa Học Piano</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3: Hỗ Trợ -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Hỗ Trợ</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="text-gray-400 hover:text-gold transition duration-200">Chính Sách Bảo Hành</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-gold transition duration-200">Phương Thức Thanh Toán</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-gold transition duration-200">Tuyển Dụng</a></li>
+                    <li><a href="#tin-tuc" class="text-gray-400 hover:text-gold transition duration-200">Blog/Tin Tức</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 4: Liên Hệ -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Liên Hệ</h4>
+                <p class="text-gray-400 text-sm">Địa chỉ: 123 Đường Nguyễn Tuân, TP. Hà Nội</p>
+                <p class="text-gray-400 text-sm mt-1">Điện thoại: (024) 2358723</p>
+                <p class="text-gray-400 text-sm mt-1">Email: support@melodygrand.vn</p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+            <p class="text-gray-500 text-sm">&copy; 2025 Melody Grand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript cho Mobile Menu -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Đóng mobile menu khi click vào một link
+        document.querySelectorAll('#mobile-menu a, #mobile-menu button').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>

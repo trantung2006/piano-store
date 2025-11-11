@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MELODY GRAND: Nơi Âm Thanh Tìm Thấy Sự Hoàn Hảo</title>
+    <style>
+        /* CSS CHUNG VÀ FONT */
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #444;
+            margin: 0;
+            padding: 0;
+            background-color: #edebeb;
+        }
+        .container {
+            /* CONTAINER CHỈ DÙNG CHO PHẦN NỘI DUNG CHÍNH */
+            width: 80%;
+            max-width: 1000px;
+            margin: 50px auto 0 auto;
+            background-color: #efdad3;
+            padding: 40px 70px;
+            border: 1px solid #efdad3;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+        /* CSS PHẦN TIÊU ĐỀ */
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #a87932;
+        }
+        /* CSS ĐỊNH DẠNG CHO LOGO */
+        .header-logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 250px;
+            max-width: 100%;
+            height: auto;
+        }
+        h1 {
+            color: #2c3e50;
+            font-family: 'Georgia', serif;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        .slogan {
+            color: #a87932;
+            font-style: italic;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        /* CSS PHẦN NỘI DUNG */
+        h2 {
+            color: #a87932;
+            font-size: 1.6em;
+            border-left: 5px solid #a87932;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .emphasis {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        /* CSS CHO HÌNH ẢNH NỘI DUNG */
+        .section-image {
+            display: block;
+            width: 80%;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto 30px auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ************************************** */
+        /* CSS SỬA ĐỔI PHẦN PHẢN HỒI KHÁCH HÀNG */
+        /* ************************************** */
+        .testimonial-section {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px dashed #ccc;
+        }
+        .testimonial-box {
+            /* THAY ĐỔI: Thêm màu nền nhạt */
+            background-color: #f7f3e8; /* Màu nền nhạt, ấm áp */
+            border-left: 4px solid #a87932;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            font-style: italic;
+        }
+        .testimonial-text {
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            /* THAY ĐỔI: Canh lề trái và định dạng đậm */
+            display: block;
+            margin-top: 10px;
+            text-align: left; /* Đặt tên sang trái */
+            font-weight: bold;
+            color: #2c3e50; /* Màu đậm hơn cho tên */
+            font-style: normal;
+            border-top: 1px solid #ccc; /* Thêm gạch ngang phân tách */
+            padding-top: 8px;
+            font-size: 0.9em;
+        }
+
+        /* ************************************** */
+        /* CSS CHO FOOTER */
+        /* ************************************** */
+        .footer {
+            background-color: #2c3e50;
+            color: #f8f8f8;
+            padding: 40px 0 20px 0;
+            margin-top: 50px;
+            border-top: 5px solid #a87932;
+            width: 100%;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .footer-col {
+            flex-basis: 30%;
+        }
+        .footer-col h4 {
+            color: #a87932;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+        }
+        .footer-col p, .footer-col ul {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .footer-col a {
+            color: #f8f8f8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-col a:hover {
+            color: #a87932;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #444;
+            font-size: 0.8em;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img class="header-logo" src="https://previews.123rf.com/images/wangsinawang/wangsinawang1807/wangsinawang180700269/106296156-grand-piano-logo-music-media-design-template-vector-design-best-use-for-store-application-shop.jpg" alt="Logo MELODY GRAND">
+            <h1>MELODY GRAND</h1>
+            <p class="slogan">Nơi Âm Nhạc Là Nguồn Sống Của Bạn.</p>
+        </div>
+
+        <div class="content-section">
+            <p>Tại "MELODY GRAND", chúng tôi không kinh doanh nhạc cụ; chúng tôi kiến tạo không gian âm nhạc tinh hoa. Chúng tôi tin rằng mỗi cây Piano là một tác phẩm nghệ thuật, là linh hồn của những giai điệu bất tử, xứng đáng được đặt trong tay những người nghệ sĩ trân trọng giá trị đích thực.</p>
+        </div>
+
+        <h2>I. PIANO THẾ GIỚI - LỰA CHỌN CỦA GIỚI TINH HOA</h2>
+        <div class="content-section">
+            <p>Bộ sưu tập của chúng tôi được dày công tuyển chọn, tập trung vào những cây Piano Grand và Upright từ các nhà chế tác lừng danh nhất lịch sử. Đó là sự kết hợp giữa truyền thống hàng trăm năm và sự đổi mới âm học hiện đại.</p>
+            <ul class="list-style-gold">
+                <li><span class="emphasis">Sự Tinh Tuyển Tuyệt Đối:</span> Chúng tôi chỉ nhập khẩu các dòng Piano Cơ (Acoustic) cao cấp, đã trải qua quá trình phục hồi kỹ thuật hoặc còn nguyên bản, từ các thị trường khắt khe nhất như Nhật Bản và Châu Âu.</li>
+                <li><span class="emphasis">Đối Tác Độc Quyền:</span> Phân phối các mẫu Piano Điện (Digital) hàng đầu, được các nghệ sĩ Piano sử dụng để luyện tập, tái tạo chân thực cảm giác phím và độ vang của đàn cơ.</li>
+                <li><span class="emphasis">Thẩm Định Chuyên Gia:</span> Mỗi phím đàn, bộ máy, và bảng cộng hưởng đều được kiểm tra kỹ lưỡng bởi những nghệ nhân điều chỉnh Piano (Piano Tuner) hàng đầu Việt Nam.</li>
+            </ul>
+        </div>
+        <img class="section-image" src="https://pianoductri.com/wp-content/uploads/2024/11/piano-duc-tri-1024x640.jpg" alt="Hình ảnh showroom Piano Grand và Upright sang trọng của MELODY GRAND">
+
+        <div class="quote-box">
+            "Âm nhạc không chỉ là nghe, mà còn là cảm nhận. MELODY GRAND mang đến âm thanh chạm đến tâm hồn, nâng tầm không gian sống của bạn."
+        </div>
+
+        <h2>II. HỌC VIỆN MELODY – KẾ THỪA NGHỆ THUẬT PIANO</h2>
+        <div class="content-section">
+            <p>Sở hữu cây đàn đẳng cấp cần đi đôi với kiến thức và kỹ năng xứng tầm. **Học viện MELODY** là nơi bạn được dẫn dắt vào thế giới nghệ thuật Piano theo một lộ trình độc quyền, được thiết kế bởi những giáo sư và nghệ sĩ biểu diễn hàng đầu.</p>
+            <ul class="list-style-gold">
+                <li><span class="emphasis">Phương Pháp Sư Phạm Khác Biệt:</span> Không chỉ dạy kỹ thuật, chúng tôi dạy cách cảm thụ, phân tích và biểu đạt tác phẩm, biến học viên thành những người kể chuyện qua âm nhạc.</li>
+                <li><span class="emphasis">Lớp Học Cá Nhân Hóa (Bespoke Learning):</span> Lộ trình học được thiết kế riêng cho từng cá nhân, dù là trẻ em năng khiếu hay người lớn muốn theo đuổi đam mê một cách nghiêm túc.</li>
+                <li><span class="emphasis">Không Gian Luyện Tập Cao Cấp:</span> Học viên được thực hành trên các mẫu đàn Piano chất lượng nhất, trong môi trường yên tĩnh, khơi nguồn cảm hứng.</li>
+            </ul>
+        </div>
+        <img class="section-image" src="https://vietthuong.edu.vn/wp-content/uploads/2020/11/nen75.jpg" alt="Hình ảnh lớp học Piano hiện đại và chuyên nghiệp">
+
+        <h2>III. DỊCH VỤ ĐẲNG CẤP - TRẢI NGHIỆM KHÔNG GIỚI HẠN</h2>
+        <div class="content-section">
+            <p>-Dịch vụ hậu mãi tại MELODY GRAND là lời cam kết trọn đời. Chúng tôi không chỉ bán một sản phẩm, chúng tôi cung cấp sự chăm sóc và bảo dưỡng cho di sản âm nhạc của bạn.</p>
+            <p>-Chúng tôi cung cấp dịch vụ vận chuyển chuyên nghiệp, lên dây và bảo trì định kỳ, đảm bảo cây đàn luôn giữ được âm sắc hoàn hảo theo thời gian. Hãy liên hệ với chúng tôi để bắt đầu chuyến hành trình âm nhạc đẳng cấp của riêng bạn.</p>
+        </div>
+        <img class="section-image" src="https://vietthanh.vn/wp-content/uploads/2025/10/len-day-piano.webp" alt="Hình ảnh dịch vụ lên dây đàn Piano chuyên nghiệp">
+
+        <div class="testimonial-section">
+            <h2>IV. LỜI CHỨNG THỰC CỦA KHÁCH HÀNG</h2>
+            
+            <div class="testimonial-box">
+                <p class="testimonial-text">"Tôi đã tìm kiếm một cây Grand Piano chất lượng phòng hòa nhạc trong nhiều năm, và MELODY GRAND đã vượt qua mọi kỳ vọng. Sự tư vấn chuyên sâu và dịch vụ hậu mãi chu đáo khiến tôi hoàn toàn an tâm. Âm thanh của cây đàn thật sự lôi cuốn và truyền cảm hứng."</p>
+                <span class="testimonial-author">-Nghệ sĩ Piano Trần Quang Hùng, Quận 1, TP.HCM</span>
+            </div>
+            
+            <div class="testimonial-box">
+                <p class="testimonial-text">"Chất lượng giảng dạy tại Học viện MELODY thực sự khác biệt. Con gái tôi không chỉ học chơi đàn mà còn học cách yêu thích và cảm thụ âm nhạc một cách sâu sắc. Đây là một khoản đầu tư xứng đáng cho tương lai nghệ thuật của cháu."</p>
+                <span class="testimonial-author">-Chị Nguyễn Thanh Tâm, Phụ huynh học viên</span>
+            </div>
+            
+            <div class="testimonial-box">
+                <p class="testimonial-text">"Tôi rất ấn tượng với sự minh bạch về nguồn gốc và quá trình kiểm định Piano nhập khẩu của MELODY GRAND. Cây đàn Upright tôi mua có chất âm rất tốt, vượt xa những gì tôi đã xem ở các showroom khác. Highly recommended!"</p>
+                <span class="testimonial-author">-Anh Phạm Minh Trí, Kiến trúc sư & Người chơi nghiệp dư</span>
+            </div>
+        </div>
+        
+    </div> <div class="footer">
+        <div class="footer-content">
+            
+            <div class="footer-col">
+                <h4>LIÊN HỆ MELODY GRAND</h4>
+                <p><strong>Showroom chính:</strong> Số 123 Đường Nguyễn Tuân, Hà Nội</p>
+                <p><strong>Hotline Tư vấn:</strong> <a href="tel:09xxxxxxxxx">(024) 2358723</a></p>
+                <p><strong>Email:</strong> <a href="mailto:contact@melodygrand.vn">support@melodygrand.vn</a></p>
+                <p><strong>Giờ làm việc:</strong> 8:00 - 20:00 (Tất cả các ngày)</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>CHÍNH SÁCH & DỊCH VỤ</h4>
+                <ul>
+                    <li><a href="[Link_Chinh_Sach_Bao_Hanh]">Chính sách Bảo hành 10 năm</a></li>
+                    <li><a href="[Link_Dich_Vu_Lien_He]">Dịch vụ Lên dây và Bảo trì Piano</a></li>
+                    <li><a href="[Link_Chinh_Sach_Van_Chuyen]">Chính sách Vận chuyển & Lắp đặt</a></li>
+                    <li><a href="[Link_Cau_Hoi_Thuong_Gap]">Câu hỏi thường gặp (FAQ)</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>KHÁM PHÁ THÊM</h4>
+                <ul>
+                    <li><a href="[Link_Gioi_Thieu]">Về chúng tôi (MELODY GRAND)</a></li>
+                    <li><a href="[Link_Khoa_Hoc_Hoc_Vien]">Các khóa học Piano tại Học viện</a></li>
+                    <li><a href="[Link_Grand_Piano]">Bộ sưu tập Grand Piano</a></li>
+                    <li><a href="[Link_Tin_Tuc]">Tin tức và Sự kiện âm nhạc</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+        <div class="footer-bottom">
+            &copy; 2025 MELODY GRAND. All Rights Reserved. Thiết kế bởi TranTung.
+        </div>
+    </div>
+    </body>
+</html>

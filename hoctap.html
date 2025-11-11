@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trung Tâm Học Tập Piano - MELODY GRAND</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Tùy chỉnh font */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: #fcf8f8; /* Nền trắng hồng nhạt, gần với ảnh */
+            color: #333; /* Text xám đen */
+        }
+        
+        /* Màu sắc chủ đạo: Xám than/đen, Accent Vàng Đồng */
+        .color-primary-text { color: #2c3e50; } /* Xám than, giống màu chữ logo */
+        .color-accent-gold { color: #a87932; } /* Vàng đồng, giống màu nhấn navbar */
+        .bg-card { background-color: #ffffff; }
+
+        /* HEADER MỚI (PHÙ HỢP VỚI HÌNH ẢNH) */
+        .header {
+            padding: 2.5rem 0;
+            text-align: center;
+            background-color: #f8eaea; /* Nền xám hồng nhạt, tương tự ảnh */
+            color: #2c3e50; /* Chữ xám than đậm */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Đổ bóng nhẹ nhàng */
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            color: #2c3e50; /* Chữ chính màu xám than */
+        }
+        .header h1 .brand-name {
+            color: #a87932; /* ĐỔI: Tên thương hiệu MELODY GRAND màu vàng đồng */
+            font-size: 1.1em; /* Làm lớn hơn một chút */
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* CARD STYLE VỚI ĐỔ BÓNG NÂNG CAO */
+        .card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s;
+            height: 100%;
+            border: 1px solid #f0e0e0; /* Viền nhạt */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #2c3e50; /* Màu xám than */
+            border-bottom: 4px solid #a87932; /* Vàng đồng làm điểm nhấn */
+            display: inline-block;
+            padding-bottom: 8px;
+            margin-bottom: 40px;
+        }
+        
+        /* REGISTRATION FORM STYLES */
+        .registration-box {
+            background-color: #fcf5f5; /* Nền hồng nhạt hơn */
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 2px solid #f0d0d0; /* Viền hồng nhạt */
+            background-image: linear-gradient(145deg, #ffffff, #fcf5f5);
+        }
+        
+        .registration-box h2 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 14px 18px;
+            margin-bottom: 20px;
+            border: 1px solid #e0caca; /* Viền nhạt phù hợp */
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background-color: #fff;
+        }
+        
+        .form-input:focus {
+            border-color: #a87932; /* Vàng đồng khi focus */
+            box-shadow: 0 0 0 3px rgba(168, 121, 50, 0.2);
+            outline: none;
+        }
+        
+        .btn-submit {
+            background-color: #a87932; /* Vàng đồng cho nút */
+            color: white; /* Chữ trắng */
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: background-color 0.3s, transform 0.1s;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            box-shadow: 0 4px 15px rgba(168, 121, 50, 0.4);
+        }
+        
+        .btn-submit:hover {
+            background-color: #8c6529; /* Vàng đồng đậm hơn khi hover */
+            transform: translateY(-2px);
+        }
+        
+        .icon-check {
+            color: #5cb85c; /* Màu xanh lá cây nhẹ nhàng hơn */
+            margin-right: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2.5rem; }
+            .section-title { font-size: 1.8rem; }
+            .registration-box { padding: 30px; }
+            .registration-box h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER: NỀN XÁM HỒNG NHẠT, CHỮ VÀNG ĐỒNG/XÁM THAN --><div class="header">
+        <h1>Học Tập & Phát Triển Tài Năng tại <span class="brand-name font-bold">MELODY GRAND</span></h1>
+        <p>Kiến thức chuyên sâu từ các chuyên gia hàng đầu, mở khóa tiềm năng âm nhạc của bạn.</p>
+    </div>
+
+    <div class="container mx-auto px-4 py-16 max-w-7xl">
+
+        <!-- PHẦN 1: CÁC KHÓA HỌC TRỌNG TÂM --><div class="mb-20 text-center">
+            <h2 class="section-title">Các Khóa Học Chuyên Sâu</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <!-- Khóa 1: Nhập Môn --><div class="card bg-card">
+                    <img class="w-full h-52 object-cover" src="https://1stpianos.com/wp-content/uploads/1QK05131-2000x1330.jpg" alt="Khóa học Piano Cơ bản" onerror="this.onerror=null; this.src='https://placehold.co/600x320/fff0e0/a87932?text=PIANO+CƠ+BẢN';">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold color-accent-gold mb-4">Piano Nhập Môn (Level 1)</h3>
+                        <p class="text-base text-gray-700 mb-6">Lộ trình 8 tuần học tập trung vào nền tảng vững chắc, giúp bạn làm quen với đàn và đọc bản nhạc.</p>
+                        <ul class="list-none text-gray-700 text-sm space-y-2 text-left">
+                            <li><span class="icon-check">&#10003;</span> 24 bài học lý thuyết và thực hành.</li>
+                            <li><span class="icon-check">&#10003;</span> Tập trung vào tư thế và kỹ thuật ngón cơ bản.</li>
+                            <li><span class="icon-check">&#10003;</span> Chứng chỉ hoàn thành khóa học.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Khóa 2: Trung Cấp Cổ Điển --><div class="card bg-card">
+                    <img class="w-full h-52 object-cover" src="https://trungnguyenpiano.com/wp-content/uploads/2025/02/Kham-pha-the-gioi-piano-co-dien.jpg" alt="Khóa học Piano Cổ điển" onerror="this.onerror=null; this.src='https://placehold.co/600x320/f0f8ff/2c3e50?text=KỸ+THUẬT+CỔ+ĐIỂN';">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold color-accent-gold mb-4">Kỹ Thuật Cổ Điển (Level 2-3)</h3>
+                        <p class="text-base text-gray-700 mb-6">Phát triển tốc độ, sức mạnh ngón và sự biểu cảm thông qua các tác phẩm kinh điển vĩ đại.</p>
+                        <ul class="list-none text-gray-700 text-sm space-y-2 text-left">
+                            <li><span class="icon-check">&#10003;</span> Luyện ngón chuyên sâu theo phương pháp quốc tế.</li>
+                            <li><span class="icon-check">&#10003;</span> Phân tích và diễn tấu các tác phẩm Baroque và Cổ điển.</li>
+                            <li><span class="icon-check">&#10003;</span> Cơ hội biểu diễn tại các sự kiện của Học viện.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Khóa 3: Đệm Hát/Jazz --><div class="card bg-card">
+                    <img class="w-full h-52 object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYLRiQtgHBEbpOPCRL8_aOJl_ib4RdQVpKgQ&s" alt="Khóa học Đệm hát/Jazz" onerror="this.onerror=null; this.src='https://placehold.co/600x320/fff8e0/a87932?text=HOÀ+ÂM+HIỆN+ĐẠI';">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold color-accent-gold mb-4">Đệm Hát & Hoà Âm Jazz</h3>
+                        <p class="text-base text-gray-700 mb-6">Học cách sáng tạo và ứng tấu. Nắm vững lý thuyết hợp âm để đệm bất kỳ bài hát nào.</p>
+                        <ul class="list-none text-gray-700 text-sm space-y-2 text-left">
+                            <li><span class="icon-check">&#10003;</span> Công thức ứng tấu Blues, Jazz và Pop/Ballad.</li>
+                            <li><span class="icon-check">&#10003;</span> Kỹ thuật tự chuyển đổi tông và tạo Intro/Outro.</li>
+                            <li><span class="icon-check">&#10003;</span> Phát triển tai nghe và khả năng thị tấu.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- PHẦN 2: THƯ VIỆN TÀI NGUYÊN --><div class="mb-20 text-center">
+            <h2 class="section-title">Thư Viện Tài Nguyên Miễn Phí</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">Khám phá các mẹo và tài liệu được biên soạn độc quyền bởi các nghệ sĩ Piano tại MELODY GRAND.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Tài nguyên 1 --><div class="bg-card p-6 card hover:border-yellow-500">
+                    <span class="color-accent-gold text-3xl mb-2 block font-serif">&#9835;</span> <!-- G Clef Icon --><h4 class="font-bold text-lg color-primary-text mb-2">Kỹ Thuật Luyện Ngón 5 Phút</h4>
+                    <p class="text-sm text-gray-600">Bài tập làm nóng nhanh, tối ưu hóa thời gian luyện tập cho người bận rộn.</p>
+                </div>
+                <!-- Tài nguyên 2 --><div class="bg-card p-6 card hover:border-yellow-500">
+                    <span class="color-accent-gold text-3xl mb-2 block font-serif">&#x2605;</span> <!-- Star Icon --><h4 class="font-bold text-lg color-primary-text mb-2">Hướng Dẫn Mua Đàn</h4>
+                    <p class="text-sm text-gray-600">Checklist 10 điểm cần biết khi chọn mua Piano điện hoặc Piano cơ đầu tiên.</p>
+                </div>
+                <!-- Tài nguyên 3 --><div class="bg-card p-6 card hover:border-yellow-500">
+                    <span class="color-accent-gold text-3xl mb-2 block font-serif">&#x266B;</span> <!-- Musical Note Icon --><h4 class="font-bold text-lg color-primary-text mb-2">Hoà Âm Nâng Cao</h4>
+                    <p class="text-sm text-gray-600">Giới thiệu các hợp âm mở rộng (9th, 11th, 13th) và cách sử dụng.</p>
+                </div>
+                <!-- Tài nguyên 4 --><div class="bg-card p-6 card hover:border-yellow-500">
+                    <span class="color-accent-gold text-3xl mb-2 block font-serif">&#9993;</span> <!-- Mail Icon --><h4 class="font-bold text-lg color-primary-text mb-2">Bộ Sưu Tập Sheet Miễn Phí</h4>
+                    <p class="text-sm text-gray-600">Tải ngay 20 bản nhạc Piano Pop/Ballad được yêu thích nhất.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHẦN 3: ĐĂNG KÝ HỌC THỬ / NHẬN TÀI LIỆU (Nổi bật) --><div class="registration-box mt-16 max-w-4xl mx-auto">
+            <h2 class="text-center">Đăng Ký Tư Vấn Miễn Phí</h2>
+            <p class="text-center text-gray-700 mb-8 text-xl font-medium">Chỉ cần điền form, đội ngũ chuyên gia của chúng tôi sẽ thiết kế lộ trình học Piano HOÀN HẢO cho bạn.</p>
+            
+            <form id="registrationForm" onsubmit="handleRegistration(event)">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4">
+                    <input type="text" id="fullName" class="form-input" placeholder="Họ và Tên (*)" required>
+                    <input type="email" id="email" class="form-input" placeholder="Email (*)" required>
+                </div>
+                
+                <input type="tel" id="phone" class="form-input" placeholder="Số Điện Thoại (*)" required>
+                
+                <select id="interest" class="form-input">
+                    <option value="" disabled selected>Chọn lĩnh vực bạn quan tâm (*)</option>
+                    <option value="hoc_thu">Đăng ký Học thử (Offline)</option>
+                    <option value="khoa_co_ban">Khoá học Piano Cơ Bản</option>
+                    <option value="khoa_nang_cao">Khoá học Nâng Cao/Jazz</option>
+                    <option value="tai_lieu">Nhận tài liệu Piano Miễn Phí</option>
+                </select>
+
+                <textarea id="message" class="form-input" rows="4" placeholder="Chia sẻ với chúng tôi về trình độ hiện tại và mục tiêu của bạn..."></textarea>
+
+                <button type="submit" class="btn-submit">HOÀN TẤT ĐĂNG KÝ & NHẬN TƯ VẤN NHANH</button>
+            </form>
+
+            <p id="responseMessage" class="text-center mt-6 text-lg font-semibold hidden"></p>
+        </div>
+
+    </div> <!-- Kết thúc container --><!-- FOOTER MÀU XÁM THAN --><div class="color-primary-text text-center py-8 mt-20" style="background-color: #2c3e50; color: white;">
+        <p class="text-lg font-semibold mb-2">MELODY GRAND - Nâng Tầm Âm Nhạc Việt</p>
+        <p>&copy; 2025 Học viện Piano MELODY GRAND. Đẳng cấp Piano và Giáo dục Âm nhạc.</p>
+    </div>
+
+    <script>
+        // Thiết lập cấu hình Tailwind JIT
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-text-color': '#2c3e50', /* Xám than */
+                        'accent-gold': '#a87932', /* Vàng đồng */
+                    }
+                }
+            }
+        }
+        
+        function handleRegistration(event) {
+            event.preventDefault();
+            const responseMessage = document.getElementById('responseMessage');
+            
+            // Lấy dữ liệu từ form
+            const fullName = document.getElementById('fullName').value;
+            const interestSelect = document.getElementById('interest');
+            const interestText = interestSelect.options[interestSelect.selectedIndex].text;
+            
+            // Đảm bảo các trường bắt buộc đã được điền
+            if (fullName && interestSelect.value) {
+                responseMessage.textContent = `Cảm ơn ${fullName}! Yêu cầu đăng ký của bạn đã được ghi nhận. MELODY GRAND sẽ liên hệ tư vấn về '${interestText}' trong vòng 24 giờ.`;
+                responseMessage.classList.remove('hidden', 'text-red-500', 'bg-red-100');
+                responseMessage.classList.add('text-green-600', 'bg-green-100', 'p-3', 'rounded-lg');
+                
+                // Reset form (tùy chọn)
+                document.getElementById('registrationForm').reset();
+                interestSelect.value = ""; // Đặt lại về option mặc định
+            } else {
+                responseMessage.textContent = 'Vui lòng điền đầy đủ Họ tên, Email, SĐT và chọn Lĩnh vực quan tâm.';
+                responseMessage.classList.remove('hidden', 'text-green-600', 'bg-green-100');
+                responseMessage.classList.add('text-red-500', 'bg-red-100', 'p-3', 'rounded-lg');
+            }
+        }
+    </script>
+
+</body>
+</html>
